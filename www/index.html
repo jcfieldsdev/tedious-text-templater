@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Tedious Text Templater</title>
+<meta charset="utf-8">
+<meta name="title" content="Tedious Text Templater">
+<meta name="description" content="Replaces text.">
+<link href="layout/style.css" media="screen" rel="stylesheet" type="text/css">
+<link href="layout/favicon.png" rel="shortcut icon" type="image/png">
+<link href="layout/homeicon.png" rel="apple-touch-icon-precomposed" type="image/png">
+<script src="script.js" type="text/javascript"></script></head>
+<body><header><h1>Tedious Text Templater</h1></header>
+<main>
+	<p id="query">
+		<button type="button" title="Select text" id="select"><span>Select</span></button>
+		<input type="text" tabindex="0" id="text">
+		<button type="button" title="Clear text" id="clear"><span>Clear</span></button>
+		<button type="button" title="Copy template 1" value="0" class="copy"><span>1</span></button>
+		<button type="button" title="Copy template 2" value="1" class="copy"><span>2</span></button>
+		<button type="button" title="Copy template 3" value="2" class="copy"><span>3</span></button>
+		<button type="button" title="Copy template 4" value="3" class="copy"><span>4</span></button>
+	</p>
+	<p>Use <input type="text" tabindex="1" id="token"> as a stand-in for the replaced text.</p>
+	<div id="templates">
+		<div class="template">
+			<div class="gutter">
+				<div class="number">1</div>
+				<div class="transforms">
+					<div><button type="button" value="0" class="transform trim">Trim whitespace</button></div>
+					<div><button type="button" value="1" class="transform lowercase">Lowercase</button></div>
+					<div><button type="button" value="2" class="transform uppercase">Uppercase</button></div>
+					<div><button type="button" value="3" class="transform htmlentities">HTML entities</button></div>
+					<div><button type="button" value="4" class="transform urlencode">URL encode</button></div>
+				</div>
+			</div>
+			<div class="textarea"><textarea class="input" tabindex="2"></textarea></div>
+			<div class="textarea"><textarea class="output"></textarea></div>
+		</div>
+		<div class="template">
+			<div class="gutter">
+				<div class="number">2</div>
+				<div class="transforms">
+					<div><button type="button" value="0" class="transform trim">Trim whitespace</button></div>
+					<div><button type="button" value="1" class="transform lowercase">Lowercase</button></div>
+					<div><button type="button" value="2" class="transform uppercase">Uppercase</button></div>
+					<div><button type="button" value="3" class="transform htmlentities">HTML entities</button></div>
+					<div><button type="button" value="4" class="transform urlencode">URL encode</button></div>
+				</div>
+			</div>
+			<div class="textarea"><textarea class="input" tabindex="3"></textarea></div>
+			<div class="textarea"><textarea class="output"></textarea></div>
+		</div>
+		<div class="template">
+			<div class="gutter">
+				<div class="number">3</div>
+				<div class="transforms">
+					<div><button type="button" value="0" class="transform trim">Trim whitespace</button></div>
+					<div><button type="button" value="1" class="transform lowercase">Lowercase</button></div>
+					<div><button type="button" value="2" class="transform uppercase">Uppercase</button></div>
+					<div><button type="button" value="3" class="transform htmlentities">HTML entities</button></div>
+					<div><button type="button" value="4" class="transform urlencode">URL encode</button></div>
+				</div>
+			</div>
+			<div class="textarea"><textarea class="input" tabindex="4"></textarea></div>
+			<div class="textarea"><textarea class="output"></textarea></div>
+		</div>
+		<div class="template">
+			<div class="gutter">
+				<div class="number">4</div>
+				<div class="transforms">
+					<div><button type="button" value="0" class="transform trim">Trim whitespace</button></div>
+					<div><button type="button" value="1" class="transform lowercase">Lowercase</button></div>
+					<div><button type="button" value="2" class="transform uppercase">Uppercase</button></div>
+					<div><button type="button" value="3" class="transform htmlentities">HTML entities</button></div>
+					<div><button type="button" value="4" class="transform urlencode">URL encode</button></div>
+				</div>
+			</div>
+			<div class="textarea"><textarea class="input" tabindex="5"></textarea></div>
+			<div class="textarea"><textarea class="output"></textarea></div>
+		</div>
+	</div>
+</main>
+<footer>Created by <a href="mailto:jcfields@jcfields.dev">J.C. Fields</a>. Hosted by <a href="https://github.com/jcfieldsdev/tedious-text-templater">GitHub</a>.</footer></body></html>

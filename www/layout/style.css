@@ -1,0 +1,277 @@
+:root {
+	--body-bg: #29335c;
+	--body-fg: #fff;
+	--button-bg: #f3a712;
+	--button-fg: #000;
+	--button-hover: #db2b39;
+	--button-inset: rgba(0, 0, 0, 0.5);
+	--input-bg: #534d41;
+	--token-bg: #534d41;
+	--textarea-bg: rgba(255, 255, 255, 0.1);
+	--fade-bg-light: #41486a;
+	--fade-bg-dark: #363d61;
+	--glow: #fff;
+}
+
+a {
+	background: none;
+	color: var(--button-bg);
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+a:hover {
+	background: none;
+	color: var(--button-hover);
+	transition: 0.25s color;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	background-color: var(--button-bg);
+	border: 0;
+	border-radius: 0.1em;
+	color: var(--button-fg);
+	font-family: inherit;
+	font-size: 2rem;
+	height: 1.5em;
+	line-height: inherit;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+button#clear {
+	background-image: url(clear.svg);
+	background-size: 50%;
+	border-radius: 0 1em 1em 0;
+	margin-right: 0.25em;
+}
+
+button#clear, button#select {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	height: 1.5em;
+	width: 2em;
+}
+
+button#select {
+	background-image: url(select.svg);
+	background-size: 50%;
+	border-radius: 1em 0 0 1em;
+}
+
+button#clear span, button#select span {
+	display: none;
+}
+
+button.copy {
+	background-image: url(copy.svg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: inherit;
+	position: relative;
+	margin: 0 0.25em;
+	width: 1.5em;
+}
+
+button.copy span {
+	background: var(--button-inset);
+	border-radius: 0.1em;
+	bottom: 0;
+	color: inherit;
+	font-size: 1rem;
+	font-weight: bold;
+	height: 1em;
+	line-height: 100%;
+	position: absolute;
+	right: 0;
+	text-shadow: 1px 1px #000;
+	width: 1em;
+}
+
+button.transform {
+	background: none;
+	border-radius: 0;
+	color: inherit;
+	font-size: 0.75rem;
+	font-weight: bold;
+	height: auto;
+	margin: 0;
+	padding: 0.25em 2em;
+	text-align: left;
+	white-space: nowrap;
+	width: 100%;
+}
+
+button.transform.active {
+	background: url(checkbox.svg) 0.5em 50% no-repeat;
+	background-size: auto 50%;
+	color: inherit;
+}
+
+button.transform:hover:not(:disabled) {
+	background-color: var(--textarea-bg);
+	color: inherit;
+}
+
+button:disabled {
+	opacity: 0.25;
+}
+
+button:hover:not(:disabled) {
+	background-color: var(--button-hover);
+	color: inherit;
+	transition: 0.25s background;
+}
+
+div#templates {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+div.number {
+	background: none;
+	color: var(--fade-bg-light);
+	font-size: 5rem;
+	line-height: 100%;
+	text-align: center;
+	width: 1em;
+}
+
+div.template {
+	background: var(--fade-bg-light);
+	border-radius: 1em;
+	color: inherit;
+	display: flex;
+	line-height: 100%;
+	text-align: center;
+}
+
+div.template:nth-child(2n) {
+	background: var(--fade-bg-dark);
+	color: inherit;
+}
+
+div.template:nth-child(2n) div.number {
+	background: none;
+	color: var(--fade-bg-dark);
+}
+
+div.template div {
+	overflow: auto;
+}
+
+div.template.highlight {
+	outline: 2px solid var(--glow);
+}
+
+div.textarea {
+	flex-grow: 1;
+}
+
+footer {
+	font-size: 0.75rem;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+header {
+	display: none;
+}
+
+html {
+	background: var(--body-bg);
+	color: var(--body-fg);
+	font: 12pt/200% Helvetica, Arial, sans-serif;
+	padding: 0;
+	text-shadow: 1px 1px #000;
+}
+
+input, textarea {
+	text-shadow: 1px 1px #000;
+}
+
+input#text {
+	background: var(--input-bg);
+	color: inherit;
+	font-size: 2rem;
+	font-family: inherit;
+	height: 1em;
+	line-height: inherit;
+	width: 100%;
+}
+
+input#text, textarea {
+	border: 0;
+	padding: 0.25em 0.5em;
+}
+
+input#token {
+	background: var(--token-bg);
+	border: 0;
+	color: inherit;
+	font-size: inherit;
+	letter-spacing: 0.1em;
+	padding: 0.125em 0.25em;
+	text-align: center;
+	width: 4em;
+}
+
+input#token, textarea {
+	font-family: Consolas, "Courier New", monospace;
+}
+
+main {
+	margin: 1em auto;
+	width: 90%;
+}
+
+p#query {
+	align-items: center;
+	display: flex;
+}
+
+textarea {
+	background: var(--textarea-bg);
+	color: inherit;
+	font-size: inherit;
+	line-height: 150%;
+	height: 20em;
+	width: 90%;
+}
+
+textarea.input {
+	border-radius: 1em 0 0 1em;
+}
+
+textarea.output {
+	background: none;
+	color: inherit;
+}
+
+@media (max-width: 800px) {
+	div.gutter {
+		display: flex;
+	}
+
+	div.template {
+		flex-direction: column;
+	}
+
+	div.transforms {
+		column-count: 2;
+		margin-top: 1em;
+	}
+}
